@@ -42,4 +42,17 @@ public class VehicleController {
 
         return vehicleService.updateVehicle(id, vehicleDetails);
     }
+
+    // 5. DELETE - DELETE
+    @DeleteMapping("/{id}")
+    public String deleteVehicle(@PathVariable Long id) {
+
+        boolean deleted = vehicleService.deleteVehicle(id);
+
+        if (deleted) {
+            return "Vehicle deleted successfully";
+        }
+
+        return "Vehicle not found";
+    }
 }
