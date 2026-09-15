@@ -9,10 +9,16 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/vehicles")
 public class VehicleController {
-    
+
     private final VehicleService vehicleService;
 
     public VehicleController(VehicleService vehicleService) {
         this.vehicleService = vehicleService;
+    }
+
+    // 1. CREATE - POST
+    @PostMapping
+    public Vehicle createVehicle(@RequestBody Vehicle vehicle) {
+        return vehicleService.createVehicle(vehicle);
     }
 }
