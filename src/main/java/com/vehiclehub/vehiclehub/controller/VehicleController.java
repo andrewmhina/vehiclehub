@@ -21,4 +21,10 @@ public class VehicleController {
     public Vehicle createVehicle(@RequestBody Vehicle vehicle) {
         return vehicleService.createVehicle(vehicle);
     }
+
+    // 2. GET ALL - GET
+    @GetMapping
+    public List<Vehicle> getAllVehicles() {
+        return vehicleService.getAllVehicles();
+    }
 }
