@@ -34,6 +34,24 @@ public class VehicleController {
         return vehicleService.getVehicleById(id);
     }
 
+    // FILTER - GET
+    @GetMapping("/filter")
+    public List<Vehicle> filterVehicles(
+            @RequestParam(required = false) String make,
+            @RequestParam(required = false) String vehicleType,
+            @RequestParam(required = false) String fuelType,
+            @RequestParam(required = false) String transmission,
+            @RequestParam(required = false) String availabilityStatus) {
+
+        return vehicleService.filterVehicles(
+                make,
+                vehicleType,
+                fuelType,
+                transmission,
+                availabilityStatus
+        );
+    }
+
     // 4. UPDATE - PUT
     @PutMapping("/{id}")
     public Vehicle updateVehicle(
