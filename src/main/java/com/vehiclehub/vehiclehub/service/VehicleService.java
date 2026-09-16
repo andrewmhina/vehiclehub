@@ -56,4 +56,17 @@ public class VehicleService {
 
         return vehicleRepository.save(vehicle);
     }
+
+    // Delete vehicle
+    public boolean deleteVehicle(Long id) {
+
+        Vehicle vehicle = vehicleRepository.findById(id).orElse(null);
+
+        if (vehicle == null) {
+            return false;
+        }
+
+        vehicleRepository.delete(vehicle);
+        return true;
+    }
 }
