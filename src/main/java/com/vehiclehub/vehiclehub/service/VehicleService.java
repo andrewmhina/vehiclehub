@@ -69,4 +69,35 @@ public class VehicleService {
         vehicleRepository.delete(vehicle);
         return true;
     }
+
+    // Filter vehicles
+    public List<Vehicle> filterVehicles(
+            String make,
+            String vehicleType,
+            String fuelType,
+            String transmission,
+            String availabilityStatus) {
+
+        if (make != null) {
+            return vehicleRepository.findByMakeIgnoreCase(make);
+        }
+
+        if (vehicleType != null) {
+            return vehicleRepository.findByVehicleTypeIgnoreCase(vehicleType);
+        }
+
+        if (fuelType != null) {
+            return vehicleRepository.findByFuelTypeIgnoreCase(fuelType);
+        }
+
+        if (transmission != null) {
+            return vehicleRepository.findByTransmissionIgnoreCase(transmission);
+        }
+
+        if (availabilityStatus != null) {
+            return vehicleRepository.findByAvailabilityStatusIgnoreCase(availabilityStatus);
+        }
+
+        return vehicleRepository.findAll();
+    }
 }
