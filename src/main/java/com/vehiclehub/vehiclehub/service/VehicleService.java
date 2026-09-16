@@ -28,4 +28,32 @@ public class VehicleService {
     public Vehicle getVehicleById(Long id) {
         return vehicleRepository.findById(id).orElse(null);
     }
+
+    // Update vehicle
+    public Vehicle updateVehicle(Long id, Vehicle vehicleDetails) {
+
+        Vehicle vehicle = vehicleRepository.findById(id).orElse(null);
+
+        if (vehicle == null) {
+            return null;
+        }
+
+        vehicle.setMake(vehicleDetails.getMake());
+        vehicle.setModel(vehicleDetails.getModel());
+        vehicle.setYear(vehicleDetails.getYear());
+        vehicle.setVehicleType(vehicleDetails.getVehicleType());
+        vehicle.setPrice(vehicleDetails.getPrice());
+        vehicle.setMileage(vehicleDetails.getMileage());
+        vehicle.setEngineCapacity(vehicleDetails.getEngineCapacity());
+        vehicle.setFuelType(vehicleDetails.getFuelType());
+        vehicle.setTransmission(vehicleDetails.getTransmission());
+        vehicle.setColor(vehicleDetails.getColor());
+        vehicle.setCondition(vehicleDetails.getCondition());
+        vehicle.setSeats(vehicleDetails.getSeats());
+        vehicle.setDescription(vehicleDetails.getDescription());
+        vehicle.setLocation(vehicleDetails.getLocation());
+        vehicle.setAvailabilityStatus(vehicleDetails.getAvailabilityStatus());
+
+        return vehicleRepository.save(vehicle);
+    }
 }
