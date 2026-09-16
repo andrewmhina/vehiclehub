@@ -13,4 +13,9 @@ public class VehicleService {
     public VehicleService(VehicleRepository vehicleRepository) {
         this.vehicleRepository = vehicleRepository;
     }
+
+    // Create a new vehicle
+    public Vehicle createVehicle(Vehicle vehicle) {
+        return vehicleRepository.save(vehicle);
+    }
 }
