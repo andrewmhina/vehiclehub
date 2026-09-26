@@ -14,6 +14,10 @@ public class User {
     private String password;
 
     public User() {
-        
+
+    }
+
+    public Long getUserId() {
+        return userId;
     }
 }
