@@ -30,7 +30,7 @@ public class UserController {
         User user = userService.loginUser(username, password);
 
         if (user != null) {
-            return "Login successful. Welcome" + user.getUsername();
+            return "Login successful. Welcome " + user.getUsername();
         }
 
         return "Invalid username or password";
