@@ -1,7 +1,10 @@
 package com.vehiclehub.vehiclehub.controller;
 
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.vehiclehub.vehiclehub.service.UserService;
 
 @RestController 
 @RequestMapping("/api/users")
@@ -11,5 +14,11 @@ public class UserController {
 
     public UserController(UserService userService) {
         this.userService = userService;
+    }
+
+    // REGISTER - POST
+    @PostMapping("/register")
+    public User registerUser(@RequestBody User user) {
+        return userService.registerUser(user);
     }
 }
