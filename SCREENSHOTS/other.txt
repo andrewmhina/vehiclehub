@@ -27,3 +27,13 @@ OUTPUT:
 2026-09-28T14:28:11.421+03:00  WARN 4784 --- [vehiclehub] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2026-09-28T14:28:12.051+03:00  INFO 4784 --- [vehiclehub] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
 2026-09-28T14:28:12.061+03:00  INFO 4784 --- [vehiclehub] [           main] c.v.vehiclehub.VehiclehubApplication     : Started VehiclehubApplication in 9.398 seconds (process running for 10.216)
+
+
+OUTPUT:
+Status: 200 OK
+{
+    "email":"andrew@gmail.com",
+    "password":"12345",
+    "userId":1,
+    "username":"andrew"
+}
