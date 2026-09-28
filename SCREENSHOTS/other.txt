@@ -4,3 +4,17 @@ Enter JSON
     "email": "andrew@gmail.com",
     "password": "12345"
 }
+
+C:\Windows\System32\cmd.exe - mvn spring-boot:run
+2026-09-28T14:16:14.514+03:00  INFO 15144 --- [vehiclehub] [ionShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-28T14:16:14.607+03:00  INFO 15144 --- [vehiclehub] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-28T14:16:14.940+03:00  INFO 15144 --- [vehiclehub] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-28T14:16:15.288+03:00  INFO 15144 --- [vehiclehub] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-28T14:16:15.368+03:00  INFO 15144 --- [vehiclehub] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  43:59 min
+[INFO] Finished at: 2026-09-28T14:16:16+03:00
+[INFO] ------------------------------------------------------------------------
+Terminate batch job (Y/N)? Y (Press Enter)
