@@ -1,5 +1,7 @@
 package com.vehiclehub.vehiclehub.service;
 
+import org.apache.catalina.User;
+
 @Service
 public class UserService {
     
@@ -12,5 +14,17 @@ public class UserService {
     // Register a new user
     public User registerUser(User user) {
         return userRepository.save(user);
+    }
+
+    // Login user
+    public User loginUser(String username, String password) {
+        
+        User user = userRepository.findByUsername(username).orElse(null);
+
+        if (user != null && user.getPassword().equals(password)) {
+            return user;
+        }
+
+        return null;
     }
 }
