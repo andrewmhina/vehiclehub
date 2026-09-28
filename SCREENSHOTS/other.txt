@@ -37,3 +37,7 @@ Status: 200 OK
     "userId":1,
     "username":"andrew"
 }
+
+OUTPUT:
+Status: 200 OK
+Login successful. Welcomeandrew
