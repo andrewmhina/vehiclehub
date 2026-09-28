@@ -2,11 +2,6 @@ package com.vehiclehub.vehiclehub.controller;
 
 import com.vehiclehub.vehiclehub.entity.User;
 import org.springframework.web.bind.annotation.*;
-import org.apache.catalina.User;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
 
 import com.vehiclehub.vehiclehub.service.UserService;
 
