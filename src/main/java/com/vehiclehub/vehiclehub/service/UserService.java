@@ -1,6 +1,5 @@
 package com.vehiclehub.vehiclehub.service;
 
-import org.apache.catalina.User;
 import com.vehiclehub.vehiclehub.entity.User;
 import com.vehiclehub.vehiclehub.repository.UserRepository;
 import org.springframework.stereotype.Service;
